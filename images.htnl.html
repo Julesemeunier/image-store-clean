@@ -1,0 +1,324 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    nav {
+      background-color: #f5f5f5;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+  </style>
+  </head>
+  <body>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="product.html">Product</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Rest of your page content below -->
+  <section>
+    <h1>Welcome to My E-Commerce Photo Site</h1>
+    <!-- More content -->
+  </section>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#f9fbfb] group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e9f2f1] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-[#0f1a18]">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6_319)">
+                    <path
+                      d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                      fill="currentColor"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6_319"><rect width="48" height="48" fill="white"></rect></clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <h2 class="text-[#0f1a18] text-lg font-bold leading-tight tracking-[-0.015em]">Lumino</h2>
+            </div>
+            <div class="flex items-center gap-9">
+              <a class="text-[#0f1a18] text-sm font-medium leading-normal" href="#">Explore</a>
+              <a class="text-[#0f1a18] text-sm font-medium leading-normal" href="#">License</a>
+              <a class="text-[#0f1a18] text-sm font-medium leading-normal" href="#">Blog</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                <div
+                  class="text-[#568f89] flex border-none bg-[#e9f2f1] items-center justify-center pl-4 rounded-l-xl border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0f1a18] focus:outline-0 focus:ring-0 border-none bg-[#e9f2f1] focus:border-none h-full placeholder:text-[#568f89] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <div class="flex gap-2">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#e9f2f1] text-[#0f1a18] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Submit</span>
+              </button>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#e9f2f1] text-[#0f1a18] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div class="text-[#0f1a18]" data-icon="ShoppingCart" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASXODTj8DqDax4Tt0Xpi_hcaVE1YH1AQK1gQbCkj9tgEsJ-rSDGmySNrUzeuvbLgiWpWWyRkm0np_OBHeL_C6vZ5--p3bts9RroukZLq7TnNqymoZws4y0ZqO98-SwQ_AAqHGsO36W66LsqZhH7IGCrnGCYQqH5mHOiExgTzYcRaar9VS-FXKbOgHBLDX3yuAup0_muheLkuT2uOJpLbNttBUi0C2hBK8QvlLjyCkytkNrpLfJUvXf3dUUXV5KTEeyl60MfB8BItuo");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="px-4 py-3">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                  <div
+                    class="text-[#568f89] flex border-none bg-[#e9f2f1] items-center justify-center pl-4 rounded-l-xl border-r-0"
+                    data-icon="MagnifyingGlass"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0f1a18] focus:outline-0 focus:ring-0 border-none bg-[#e9f2f1] focus:border-none h-full placeholder:text-[#568f89] px-4 rounded-r-none border-r-0 pr-2 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                    value="Search high-resolution art images"
+                  />
+                  <div class="flex items-center justify-center rounded-r-xl border-l-0 border-none bg-[#e9f2f1] pr-2 pr-4">
+                    <button
+                      class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-[#0f1a18] gap-2 text-base font-bold leading-normal tracking-[0.015em] h-auto min-w-0 px-0"
+                    >
+                      <div class="text-[#568f89]" data-icon="XCircle" data-size="24px" data-weight="regular">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                          <path
+                            d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div class="flex gap-3 p-3 overflow-x-hidden">
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-4">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">All</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-4">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Abstract</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-4">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Modern</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-4">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Impressionism</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-4">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Renaissance</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-4">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Sculptures</p>
+              </div>
+            </div>
+            <h3 class="text-[#0f1a18] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Filter by</h3>
+            <div class="flex gap-3 p-3 flex-wrap pr-4">
+              <button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-2">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Artist</p>
+                <div class="text-[#0f1a18]" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                  </svg>
+                </div>
+              </button>
+              <button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-2">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Date Added</p>
+                <div class="text-[#0f1a18]" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                  </svg>
+                </div>
+              </button>
+              <button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-2">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Aspect Ratio</p>
+                <div class="text-[#0f1a18]" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <h3 class="text-[#0f1a18] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Sort by</h3>
+            <div class="flex gap-3 p-3 flex-wrap pr-4">
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-4">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Popularity</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-4">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Newest</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-4">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Price: Low to High</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-4">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Price: High to Low</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e9f2f1] pl-4 pr-4">
+                <p class="text-[#0f1a18] text-sm font-medium leading-normal">Rating</p>
+              </div>
+            </div>
+            <p class="text-[#568f89] text-sm font-normal leading-normal pb-3 pt-1 px-4">1200 results</p>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKmOxaSJCdm2chWO9Qrph1IzoPlxLYvK9ziUBIjrlHL6ovtTs6YqxiEqnS0uT3a7D8Kur7-81qmrOBxHCR_iiI6OCSNc2FfbUlgF_PlUMDDNifAKM2y-J71rfFxGmqFouFemNiQyazbR4bGFusk_6KfUIdWL2cOpcI8X52JDtQ_AuYbBFD2O41OTNlyhIDM6UAaGE83WizJfCzMHr5xGyMMjmWeZbpWhHLtFsU18oCf1Mr2ZDhAqAAo0oxmoCnJZe6-hlG6iSdIbBc");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_Uymf984z3m0TxNYgxRVAwk9BRk8W_Mb97szuHdRRTFNHR_CAG7ofI1YkNGDVmSNm_fAWkfbQ49-VKXkQlLbruejF8pYOatQ6mAkR9JnAai1sQtCC7dxh8iZV7rRLIj2gVcYQXCLb9zyheCVsci1rCNW19V3-M9gqBXBQmBHYJilRCpAep__G3Wi_B3exJXVx7ppB1nNBR9W2T_E0-FRwK8CPUzLrtHQpLI5gLhe2dm_BjwnZ0SNZUl48z8szRLL63KPsJgQ9nRc4");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDyqV8AaE-mMERRq7meauzxPOXSVoXlZ1bhhzr97Dlt8tnhOGE0ckM_MpVJmTQbpppo1L7OgAK6qAt6Lf23TAJMXQDjXhaKGmwt1TIx8CU_tzIU_BeIdpNmnpGymdUx7EjZ6V_CP27BReLAGZujAF-EsyCBksW4pR4DF-bZ0E0-K-U504fmAH8LGRBo51il7YmOtomb8N21jH4oruJ9KVuBPub4ufBLnavn7GA8lgO0xAFKgevBzqtsipOlsLxvQ2365pVGmBlIxoEf");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGtvMWGBzRnv60V0QYa_9NplO9gCP-2P9-YNTv_GZ82vlIkUGJfoKgKkz_aW9O2cDw-vV3ph11Ll0fbloNFWuI5m-fEm2qEJ9xn0ydy93bwZPNkDwZb_Z8M-0fmCo3Iur_0tjO10GPidC-sXJ3ugbAbbzzUC7MSbIkzZEd8J3mDi-d6Dx5-rkoYlPyE3sJyH7oEatDNBHytD-OFrFeXt4fMtXr7U8P4PI08Qdid6L_i2pkdnYJbOe4NW3LtdIT08s9k4-uso4O3s6M");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCKJZA1-YdhIHR32OBB4p7xYRm9N3KN_9zbqFYi4mFbQYQRDGFDYV0oo5CFAy0SnvH_z1ixtPxJxCSkSAYwTjIOe-OkYgxBXOMscNc9URFuYb5kPxZcB9VOGazHKC0BHRRAEVeXnhcbZCcqI7wy3VETUoMa9Eibp15z1lCXJhuRz0XPRE3lnyDtsaRHBtg0A5hKuSIDUdo6EkitscIclKdV4ZBTSO3St_SolUNhBU2ag8ezkxYhjKDR8JrO9aPOMk-w_m4M6zHVRO0y");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuKCJah01x_MAXGiB367Rz8Cs2m75DXYZI16lT58zSjA1M4nxweyWdp9uqKgvM8c-InxaS_zyufOASlqaySVfDrRhX6sVKDS-1zCrj3rtN4SRhGY2YQZb2ZcAoH2VBjmFUnXRoio4365GljDShWRPHCkXrcsB5AFpbk1FbGZjzxtxT9lQzjYkg4oOZyZX2T-LJ2PxCyj4QOANbZ6HAhSNIgW8q2SBZkNKgUU89XkH27QAWdr82XqlKvjBUgZjOucuWZdAWcVcTdg6v");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDx9v0iv6XlGkgF4kodnrIYtVxQAgYQudmm6bkcsX_YP9ciGSD18JbPjvF95M6TRZmZxorV1VeggJrs0vxnjfj_Nz60r-KMY1285YGijrPVZ6kmayQdLVJJdfnZ4KvbhT9kqBh_TU47GRjqsviUi3uRiG9_te7l0UbW25Luu6yQuxKFY2ry8I5T7O5GDEs0te8CVtkrMtZlmrGfSzls3CQHhpZuAE8wVuGGsOUgo3ZuIfZFfh8AnAZHlnIVFJmbRRNrvlJWTrr5AWr");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBluGTX_COLcs4rys2PUINDj1s6TFikVnrfRrmo9W-ZD6DPPTQHKS5WTClY7KHBHz9_fqvEMRV33je-imNW4nTWldGJU2_XzYSCh_5jeLVZukmE9h3D98pXnqwy_G1OXpXKr0-ormDv1v_q0HC5BtP58oQdQbVgleT72w3XrsuJ1JykZE8c6pF2qHCXjbl9fySfpOmebORPdHlkOWD4Gc3LCkIt3jkwZUxXBddbZLWS1Oeryg0vuJzFRLW0gVyd1DacUr8Wtdal0Ogm");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB5UtGIxrBd5VcaU-RCKftDequqt2-jGVQ0T5bAWig1jmgehjSSCMV9Z6lu0Xi8jmYmhz6eLtM6ROZH_wZmS4v_C9lASO-Y1Dc_s43J_4i6n4cVVBfNOoKHo9buuM1DXo4xZKCNEhET7v4G1-RpXulJ6gJULk8P5Phmoi3oNu3jPXDrIEEtG9jJ73Rbj1OwO1-zcRbJdiO9xDgu5D82-XwCDV71aQ7mPnFKryyR0vRSpWa4GzTAgLA6_briFC7Svwbz1vH4dRIZsv_9");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTfrmIg4eG0FdL17eqJpT-etajjBOBF4y_b2dZcpmiug_dAWnmxprq8Cx4lXoabkKcmmf5T-t8vJJ5barWupAXQ-mK5Qn0TrKk76UhdM-n2FDKiiufMNMqQS-tp0NmysvvDB43SQF_ZAtrf5nki8mBr1JKQG35i1AGXG9uG0uvatZpKlvdrlkNEFlrQFvGABXuFHIGn3vKvGLVqAkvCkffxXscXMBJ3PWUPEHKTgezyEKqOlT7Cyx_0VLycPzlg1vrQZsXK2x1DKBr");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRuGH48XIMvbNBWSj4M3vmttN-s8RyVnGjU2xYOZDIhUmTmnBMxZ9QvuLLL_AeUTHo-u-vhQZeYQoqLJMPSu4J7qsVysiTiz-_06GYg44J43lunCWEZCM0MMQb4G7e5GuN9LoWi3t4jo6FSvop0boFn_E1OhVbR_Zn4tMclyIGCJos4kmIb1WmqZjc912pLi-2Z5jNWvcC8IcYbr7e0BoO26Zf9odgqJGVWGVY0PlEzPsoinCZ9vqGIm6muOVmhNmCfUSKhsEsq2zr");'
+                ></div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSGPpcKsmsWYTr3dvvUrmHPc-RbGEJVpoA1C0QN37EWyr22D1-fCq8mwFnWxbloIwFYJUCSyFnuZVXJNMWA506Op0TSn_wU33LaiMMG-CWqMeNoZ1iF_v1dKMTK-uZstL4Pc4lA2HDC7PlryR28L8e4yYuPX0jtnPJF2rwkzZQeDX9ciRbpxE7dcPxIOF0LLy90BIIiegiJObmllMsYEUv05dS_WpMYgQlVTz3J8eJ_kBw1yxoMfZ_2peWbe9zJi8PDE1md4bxw7lm");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-center p-4">
+              <a href="#" class="flex size-10 items-center justify-center">
+                <div class="text-[#0f1a18]" data-icon="CaretLeft" data-size="18px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path>
+                  </svg>
+                </div>
+              </a>
+              <a class="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-[#0f1a18] rounded-full bg-[#e9f2f1]" href="#">1</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#0f1a18] rounded-full" href="#">2</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#0f1a18] rounded-full" href="#">3</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#0f1a18] rounded-full" href="#">4</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#0f1a18] rounded-full" href="#">5</a>
+              <a href="#" class="flex size-10 items-center justify-center">
+                <div class="text-[#0f1a18]" data-icon="CaretRight" data-size="18px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
