@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
       rel="stylesheet"
@@ -13,225 +16,214 @@
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
-    nav {
-      background-color: #f5f5f5;
-      padding: 12px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+      nav {
+        background-color: #f5f5f5;
+        padding: 12px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #333;
-    }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #333;
+        transition: color 0.3s ease;
+      }
 
-    nav a:hover {
-      color: #000;
-    }
-  </style>
+      nav a:hover,
+      nav a.active {
+        color: #30cebc;
+      }
+
+      footer {
+        background-color: #f5f5f5;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      footer a {
+        margin: 0 10px;
+        font-weight: 500;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: #30cebc;
+      }
+
+      /* Hide scrollbar for horizontal scroll containers if needed */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
   </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-[#f9fbfb] group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e9f2f1] px-10 py-3">
-          <div class="flex items-center gap-8">
-            <div class="flex items-center gap-4 text-[#0f1a18]">
-              <div class="size-4">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_6_319)">
-                    <path
-                      d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
-                      fill="currentColor"
-                    ></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_6_319"><rect width="48" height="48" fill="white"></rect></clipPath>
-                  </defs>
-                </svg>
-              </div>
-              <h2 class="text-[#0f1a18] text-lg font-bold leading-tight tracking-[-0.015em]">Lumino</h2>
-            </div>
-            <div class="flex items-center gap-9">
-              <a class="text-[#0f1a18] text-sm font-medium leading-normal" href="#">Explore</a>
-              <a class="text-[#0f1a18] text-sm font-medium leading-normal" href="#">License</a>
-              <a class="text-[#0f1a18] text-sm font-medium leading-normal" href="#">Enterprise</a>
-            </div>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+  <body
+    class="relative flex size-full min-h-screen flex-col bg-[#f9fbfb] group/design-root overflow-x-hidden"
+    style='font-family: Inter, "Noto Sans", sans-serif;'
+  >
+    <!-- Navigation -->
+    <nav id="navbar">
+      <a href="#search" class="nav-link">Search</a>
+      <a href="#products" class="nav-link">Products</a>
+      <a href="#images" class="nav-link">Images</a>
+      <a href="#buy" class="nav-link">Buy</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
+
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e9f2f1] px-10 py-3"
+        style="display:none"
+      >
+        <!-- Old header hidden to avoid confusion -->
+      </header>
+      <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <!-- Sections -->
+          <section id="search" class="min-h-[480px] py-10">
+            <h1 class="text-3xl font-bold mb-4">Search</h1>
+            <!-- Search content -->
+            <label
+              class="flex flex-col min-w-40 h-14 w-full max-w-[480px] @[480px]:h-16"
+            >
               <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
                 <div
-                  class="text-[#568f89] flex border-none bg-[#e9f2f1] items-center justify-center pl-4 rounded-l-xl border-r-0"
+                  class="text-[#568f89] flex border border-[#d2e4e2] bg-[#f9fbfb] items-center justify-center pl-[15px] rounded-l-xl border-r-0"
                   data-icon="MagnifyingGlass"
-                  data-size="24px"
+                  data-size="20px"
                   data-weight="regular"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20px"
+                    height="20px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
                     <path
                       d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
                     ></path>
                   </svg>
                 </div>
                 <input
-                  placeholder="Search"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0f1a18] focus:outline-0 focus:ring-0 border-none bg-[#e9f2f1] focus:border-none h-full placeholder:text-[#568f89] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  placeholder="Search for images"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0f1a18] focus:outline-0 focus:ring-0 border border-[#d2e4e2] bg-[#f9fbfb] focus:border-[#d2e4e2] h-full placeholder:text-[#568f89] px-[15px] rounded-r-none border-r-0 pr-2 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
                   value=""
                 />
+                <div
+                  class="flex items-center justify-center rounded-r-xl border-l-0 border border-[#d2e4e2] bg-[#f9fbfb] pr-[7px]"
+                >
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#30cebc] text-[#0f1a18] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                  >
+                    <span class="truncate">Search</span>
+                  </button>
+                </div>
               </div>
             </label>
-            <div class="flex gap-2">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#30cebc] text-[#0f1a18] text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Submit a photo</span>
-              </button>
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#e9f2f1] text-[#0f1a18] text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Sign up</span>
-              </button>
+          </section>
+
+          <section
+            id="products"
+            class="min-h-[480px] py-10"
+            style="background: #e9f2f1; border-radius: 1rem"
+          >
+            <h1 class="text-3xl font-bold mb-4">Products</h1>
+            <!-- Products content -->
+            <p>Showcase your products here.</p>
+          </section>
+
+          <section id="images" class="min-h-[480px] py-10">
+            <h1 class="text-3xl font-bold mb-4">Images</h1>
+            <!-- Images content -->
+            <div class="flex overflow-x-auto no-scrollbar gap-4">
+              <!-- Example image cards -->
+              <div
+                class="w-60 h-40 bg-cover bg-center rounded-xl"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcHmx84_UBWz6NghO7ikfLs3pV7HpxHuMh3yZBx7l1kYli0I3ZKE4nXakZ_e0LNH4p2tqIyALauGZ9RX7q-p3QWS7F7jXhT6p-o6EkJw_yqVwgjFBQUHuyBCuZAk6hkmMzOh18NnQeqbutbC5IZLhqmIOkKEvqtTSXVcGqvFJAfFVc2LvZRu4sptHo5noSOfp_3vb2ebkwJwEgg63E7sr6gQ-T4Je_YaPyauQG1DmFXb24Wc16chconvIf5c4Q2wQzSayyFP0J3m3J");'
+              ></div>
+              <div
+                class="w-60 h-40 bg-cover bg-center rounded-xl"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADPVP18r4c0MAM2nodjytQY0E52jg9SWH7Nskru6VZp2My2ZH62h024XVmFJxzSdzXIgRWZTGFLf5efG0CXcb76alS18Uoh7Vno46e515L7ro3bWpz1RwHSgRaTlyAh5esG4Fq1_UmX3BLeU93CiX0lK-u1v0wH7ljCpUk1sist15V7pb0h1P78DHoWckLL63OZbH-1pVDSLHtQAev91BP6bu4QO6JmsBtnTeln2xOoq0yWNdCsFe3UZDZDBxcDwS5Al-IdTFWSAlh");'
+              ></div>
+              <!-- Add more image cards as needed -->
             </div>
-          </div>
-        </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfAsoi2g1Qn8vRVQQAngiIIEjYMMDpR9NkoCCbfR9gWXN2JjbVWUPyBgZhOZ5VJ9KpdjBEdK3I4ooekrKQyJOxmxdnWsURX5xEkHyA8OC5dl0aqo8J2hpz-p-FDuULvbDfIrOUxwybhhX1NOXdBX4luzk9dKs7JaNMETScomUZmjA9NAD3pAB5RX1Ccd5IxJO_GvulSm4ElTVI8dH2c-sgHaK_g8WVDHeZPIknUGWzdBKMEzRqM-t8VXjJuxeRULWic1SEd1WKkhGF");'
-                >
-                  <div class="flex flex-col gap-2 text-center">
-                    <h1
-                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
-                    >
-                      Find the perfect image
-                    </h1>
-                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      Search millions of high-resolution, copyright-free photos and art images
-                    </h2>
-                  </div>
-                  <label class="flex flex-col min-w-40 h-14 w-full max-w-[480px] @[480px]:h-16">
-                    <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
-                      <div
-                        class="text-[#568f89] flex border border-[#d2e4e2] bg-[#f9fbfb] items-center justify-center pl-[15px] rounded-l-xl border-r-0"
-                        data-icon="MagnifyingGlass"
-                        data-size="20px"
-                        data-weight="regular"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                          <path
-                            d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                          ></path>
-                        </svg>
-                      </div>
-                      <input
-                        placeholder="Search for images"
-                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0f1a18] focus:outline-0 focus:ring-0 border border-[#d2e4e2] bg-[#f9fbfb] focus:border-[#d2e4e2] h-full placeholder:text-[#568f89] px-[15px] rounded-r-none border-r-0 pr-2 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
-                        value=""
-                      />
-                      <div class="flex items-center justify-center rounded-r-xl border-l-0 border border-[#d2e4e2] bg-[#f9fbfb] pr-[7px]">
-                        <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#30cebc] text-[#0f1a18] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-                        >
-                          <span class="truncate">Search</span>
-                        </button>
-                      </div>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#0f1a18] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Trending</h2>
-            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-              <div class="flex items-stretch p-4 gap-3">
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcHmx84_UBWz6NghO7ikfLs3pV7HpxHuMh3yZBx7l1kYli0I3ZKE4nXakZ_e0LNH4p2tqIyALauGZ9RX7q-p3QWS7F7jXhT6p-o6EkJw_yqVwgjFBQUHuyBCuZAk6hkmMzOh18NnQeqbutbC5IZLhqmIOkKEvqtTSXVcGqvFJAfFVc2LvZRu4sptHo5noSOfp_3vb2ebkwJwEgg63E7sr6gQ-T4Je_YaPyauQG1DmFXb24Wc16chconvIf5c4Q2wQzSayyFP0J3m3J");'
-                  ></div>
-                  <p class="text-[#0f1a18] text-base font-medium leading-normal">Abstract art</p>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADPVP18r4c0MAM2nodjytQY0E52jg9SWH7Nskru6VZp2My2ZH62h024XVmFJxzSdzXIgRWZTGFLf5efG0CXcb76alS18Uoh7Vno46e515L7ro3bWpz1RwHSgRaTlyAh5esG4Fq1_UmX3BLeU93CiX0lK-u1v0wH7ljCpUk1sist15V7pb0h1P78DHoWckLL63OZbH-1pVDSLHtQAev91BP6bu4QO6JmsBtnTeln2xOoq0yWNdCsFe3UZDZDBxcDwS5Al-IdTFWSAlh");'
-                  ></div>
-                  <p class="text-[#0f1a18] text-base font-medium leading-normal">Abstract art</p>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7JlrM5l4RdCOr7oj6jde6TizOV9ptEY-U4mbf1Mo6Hwb4m9b6wW82rtac3xcIWu20TECu_JrKtNPXf62pZhXnFsp_G_MvK5cJr6wTiHAYeNExDJiB_rKLK-JI0mieR1bWQvQTwyFG17SESFYRw_drjwKGO5sAKxEFntIh5YK8sMXvMNyquPYs5FxYkGarCTfHsXTNIHBe6pAZWAAtlBL122EPPlxLxXG0CT8yzYUX7vCl7LUXmVV-r-oXJQ1SWhlEXfF0PQvbKRFg");'
-                  ></div>
-                  <p class="text-[#0f1a18] text-base font-medium leading-normal">Abstract art</p>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC47ZnRKBzxffGjWBV0enW9Cyiko9l_cYOOG68Ex87a5vHcDnttAKgWsymps8Fe3hf40beUMAGrsz96HPe3HJEeuH90Ocxnd7I1YGxWGKPGbrsFZQv48uG6VbYx92Si7RlAdE8qIiz_2Q2L-kHGnIVRpX56HyAGtwDRknlw33iw-606-MeZocvZHpF8nG6Ysj9M4wBty1d--j8NPCCCS7Bn7t3hj80e2A18rZVnQpHK-G9w7PK_fGTIKrprSMF0kbw8l63Ri0nqZXnK");'
-                  ></div>
-                  <p class="text-[#0f1a18] text-base font-medium leading-normal">Abstract art</p>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTCshj4uqUG1OSc5EEnKp1jTtxkkL1ORcSDqeIc2xkV3pxgLAVADsLRdnBR57Hsb9sbNXGcDVG5EzrvTS6RM9zXxB7I6p8-I7jmPRjO_IQOPNF4iZywrdlYOnU4BuIsl5aa7czm76hAwS-3BjTPEdVXaz71t-cCxBQilqJ2HQpWQXJnLJ80M29LPaaQ7mHABjc8LYs5zG6NSXin-NewVEKGqqKmg_6RHODlr-ehmH9LB2RQ77W7ZNrou6mKCyqxDDXpR3FkXEoqShG");'
-                  ></div>
-                  <p class="text-[#0f1a18] text-base font-medium leading-normal">Abstract art</p>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#0f1a18] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Explore by category</h2>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-              <div class="flex flex-col gap-3 pb-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEbd_GB9jCESU3rtBTFTaeaa-jTY8U0K67_79g0eZ2VfX3T6QXXv_w9Muu3Nt-ZaJhBwF-ZuRHpfzaExpMHs1OkZzOhipgbZtMg8-LoHlZKN9M5KZemmVRoz8XvKTMrUNsJbMlzgPnlr78ytlDEvi0COJBku863nxh4w4hiIGq4vMn0KVQ8K2kuXMXsonCFrkWku_YshXo330UvPsa_J3zBmooqaNsPzzcJkh8uIH5vdX568We6j7cxsjUpfWoo71fjUlwYBKekSwt");'
-                ></div>
-                <p class="text-[#0f1a18] text-base font-medium leading-normal">Nature</p>
-              </div>
-              <div class="flex flex-col gap-3 pb-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNacDxcvo9vkjVP2__zWqi-DRA_rl14texczhHF5LabuEOztUw2zxZq8hzPc-rJ5e-6td4DxWgXMl8PYevUuTf3q1GR6X86ER3EkAxm6WrDIlfIfcTI68IbLu9i9FvpHPdtqQrMGemqeKzSMa69UtrjSTXqJFD3y99KjGhIMoccTraYjbCZmWK-EIXhcmrKdeAUxRpZnz8mFISReZfYpaY2HhBuxspB2nVdvlaDTq9VBtLYZ3kIb_SXm5kEsd2yJFewQmHCktUy4o1");'
-                ></div>
-                <p class="text-[#0f1a18] text-base font-medium leading-normal">Architecture</p>
-              </div>
-              <div class="flex flex-col gap-3 pb-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2RTKgSBPbfEG4qlSuwxC4Pd-WKInOHyzjudpXq_wlRPqpOwRJw1kGd2YJP6yFjtHxMQHPqip01yvCbgJJJSABJV3mIf-I7vvbRpKNotDGm6kxP6P2FXw0Rc9Pe8selcgFp0PUWsiEUKEGBVaiudB9Lu2ZNvlkbZRjCxKPyC1Fah9nXuKew6zVQNWFueI_ZuiNF5exdz5MWg7qkTFDznFjJaZhHhzCUoRl6bIMM-QyPs0ZdBvv_aFRi7bD5uFZq1BIy68h1CBokgPJ");'
-                ></div>
-                <p class="text-[#0f1a18] text-base font-medium leading-normal">Food</p>
-              </div>
-              <div class="flex flex-col gap-3 pb-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBY7lSlnhVJY5EpgHEBgz1gjq66WblPiV_Vi5s2-rN6GCP9V4Lt3PAWVV5DgLSDU52mD6a1nseD6Mv2gwdVHPtLYlUZDTIAo5QDqbOpcDkJ4xIIm6xeAmK2KPaybuy5IJ8XuaMw_mpeTk0PISS4oYCpWYMLG7SvFxhTMPzsKh5LYGcIE5UInGXyk7XDKQfubl3yY6Vpl8GL_JHSY8yaYEVT7xJLPQ5S1ISb-hATeCYDYHXUPYJVGT-16koJU6KMc1JzToG9uMphuIbA");'
-                ></div>
-                <p class="text-[#0f1a18] text-base font-medium leading-normal">People</p>
-              </div>
-              <div class="flex flex-col gap-3 pb-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDs7ukTy-fstVCFlXtIFMfNFzEq8rMeXrQkLeMuPuouUizk7IoX7_O4rXpvA5TjBs90w4ky4Hw9ytdXE0sBN36SKL7QT9397wSarzecefMxLy_BTgvBrtlJ_eloYnX3uEwbueR-O48qUjnjt1sl9bmtjlqxh3aijiuNLvOqpoKvb8t39oeZCSwtWdldEYXhdrNzDrjpVK5EvxadwiYuQH76NzF59WRoP5Sd1-M6BZIkzEgWTkxcqw_AgswD2PZOctamMO1f7CkuFTco");'
-                ></div>
-                <p class="text-[#0f1a18] text-base font-medium leading-normal">Technology</p>
-              </div>
-              <div class="flex flex-col gap-3 pb-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCiv0QsTXMpZLjXBOPXQUPc1fn1nyE8YCE-g311zzvECGfedy8-THmGvc_RZirZZ9QOzs42DnLLrF29yU_eQXSC8bYDeyPpsodL66TNTyfrhP2zNCPga91A6a6jYss6UOwSvIgMbrIqZrS0lBgH6DQ6HzvhS-ry8zCqUt_9DL_Be2wmtGUCj-ZxggtqQMVgMIw4YWDiESK9UprzrTdpggqNgRZXo68qQor_fy32Fk4exr_kVMMppTBjMybUEpkt5WNUPE9KV1tMzTSj");'
-                ></div>
-                <p class="text-[#0f1a18] text-base font-medium leading-normal">Travel</p>
-              </div>
-            </div>
-          </div>
+          </section>
+
+          <section
+            id="buy"
+            class="min-h-[480px] py-10"
+            style="background: #e9f2f1; border-radius: 1rem"
+          >
+            <h1 class="text-3xl font-bold mb-4">Buy</h1>
+            <!-- Buy content -->
+            <p>Information about buying options goes here.</p>
+          </section>
+
+          <section id="about" class="min-h-[480px] py-10">
+            <h1 class="text-3xl font-bold mb-4">About</h1>
+            <!-- About content -->
+            <p>About your company or project.</p>
+          </section>
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+      <a href="license.html">License</a>|
+      <a href="termsofservice.html">Terms of Service</a>|
+      <a href="privacypolicy.html">Privacy Policy</a>
+    </footer>
+
+    <script>
+      // Smooth scroll for nav links
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute("href").substring(1);
+          const target = document.getElementById(targetId);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      // Active link highlighting on scroll
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav a");
+
+      window.addEventListener("scroll", () => {
+        let currentSection = null;
+        const scrollPos = window.scrollY + window.innerHeight / 3;
+
+        sections.forEach((section) => {
+          const top = section.offsetTop;
+          const bottom = top + section.offsetHeight;
+          if (scrollPos >= top && scrollPos < bottom) {
+            currentSection = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + currentSection) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
